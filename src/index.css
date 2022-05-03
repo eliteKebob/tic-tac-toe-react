@@ -1,13 +1,112 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: darkslateblue;
+  color: yellow;
+  transition: 0.3s all;
+}
+
+.app button {
+  outline: none;
+  border: 2px solid yellow;
+  background: transparent;
+  margin-top: 3vh;
+  padding: 1vh 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: yellow;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.app button:hover {
+  background-color: yellow;
+  color: darkslateblue;
+}
+
+.game.table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.row-1,.row-2,.row-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-1 div,.row-2 div,.row-3 div {
+  width: 10vw;
+  height: 10vw;
+  border: 1px solid yellow;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: yellow;
+}
+
+.scoreboard {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreboard h2 {
+  font-size: 2rem;
+  margin: 0 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreboard h2 span {
+  margin: 0 1vw;
+}
+
+.info {
+  margin-bottom: 1vh;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.row-1 .sq-1,.row-2 .sq-1, .row-3 .sq-1 {
+  border-left: none;
+}
+
+.row-1 .sq-3,.row-2 .sq-3, .row-3 .sq-3 {
+  border-right: none;
+}
+.row-3 .sq-1,.row-3 .sq-2, .row-3 .sq-3 {
+  border-bottom: none;
+}
+.row-1 .sq-1,.row-1 .sq-2, .row-1 .sq-3 {
+  border-top: none;
 }
